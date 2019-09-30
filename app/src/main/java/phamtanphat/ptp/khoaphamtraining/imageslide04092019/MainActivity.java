@@ -14,10 +14,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Countdowntimer
-        CountDownTimer countDownTimer = new CountDownTimer(10000,1000) {
+        CountDownTimer countDownTimer = new CountDownTimer(10000,500) {
             @Override
             public void onTick(long l) {
-                Log.d("BBB",l + "");
+                Log.d("BBB", Math.round( l / 1000f) + "");
             }
 
             @Override
