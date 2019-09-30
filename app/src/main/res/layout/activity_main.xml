@@ -7,13 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:src="@drawable/ic_launcher_background"
-        android:layout_marginTop="200dp"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/imaeview"
-        android:layout_width="250dp"
-        android:layout_height="250dp"/>
+
     <Button
         android:id="@+id/buttonSlideImage"
         android:layout_marginTop="10dp"
@@ -22,6 +16,13 @@
         android:text="Slide Show Image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+    <ImageView
+        android:src="@drawable/ic_launcher_background"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imaeview"
+        android:layout_width="250dp"
+        android:layout_height="250dp"/>
 
 
 </RelativeLayout>

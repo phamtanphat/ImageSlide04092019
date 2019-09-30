@@ -14,11 +14,12 @@ public class MainActivity extends AppCompatActivity {
     ImageView mimg;
     Button mbtnSlide;
     int[] mArrayanimal = {R.drawable.ic_cat,
-                          R.drawable.ic_dog,
-                          R.drawable.ic_fish,
-                          R.drawable.ic_lion,
-                          R.drawable.ic_monkey};
+            R.drawable.ic_dog,
+            R.drawable.ic_fish,
+            R.drawable.ic_lion,
+            R.drawable.ic_monkey};
     int index = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,16 +31,21 @@ public class MainActivity extends AppCompatActivity {
     private void event() {
         mbtnSlide.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                CountDownTimer countDownTimer = new CountDownTimer(6000, 1000) {
+            public void onClick(final View view) {
+                view.setVisibility(View.GONE);
+                CountDownTimer countDownTimer = new CountDownTimer(60000, 1000) {
                     @Override
                     public void onTick(long l) {
-                       mimg.setImageResource(mArrayanimal[index++]);
+                        if (index == mArrayanimal.length) {
+                            index = 0;
+                            view.setVisibility(View.VISIBLE);
+                        }
+                        mimg.setImageResource(mArrayanimal[index++]);
                     }
 
                     @Override
                     public void onFinish() {
-
+                        this.start();
                     }
                 };
                 countDownTimer.start();
