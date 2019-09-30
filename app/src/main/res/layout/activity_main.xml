@@ -8,12 +8,14 @@
     tools:context=".MainActivity">
 
     <ImageView
+        android:src="@drawable/ic_launcher_background"
         android:layout_marginTop="200dp"
         android:layout_centerHorizontal="true"
         android:id="@+id/imaeview"
         android:layout_width="250dp"
         android:layout_height="250dp"/>
     <Button
+        android:id="@+id/buttonSlideImage"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/imaeview"
